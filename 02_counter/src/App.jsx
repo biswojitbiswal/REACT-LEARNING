@@ -9,11 +9,24 @@ function App() {
   const addValue = () => {  
     if(counter < 20){
       setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // if we want to increase our count 4 times and in this way then it is not working
     }
     else {
       counter = 20;
     }
   }
+
+
+  // const addValue = () => {  
+  //     setCounter(prevCounter => prevCounter + 1);
+      //  setCounter(prevCounter => prevCounter + 1);
+      // setCounter(prevCounter => prevCounter + 1);
+      // setCounter(prevCounter => prevCounter + 1);
+      // if we do this then our counter value will be increase 4 times 
+  // }
 
   const removeValue = () => {
     if(counter > 0){
