@@ -1,6 +1,13 @@
-import React from 'react'
+import { useEffect } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Card() {
+    const {themeMode} = useTheme();
+
+    useEffect(() => {
+        document.querySelector('html').classList.remove('light', 'dark');
+        document.querySelector('html').classList.add(themeMode);
+    }, [themeMode]);
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="/">
@@ -75,4 +82,3 @@ export default function Card() {
         </div>
     );
 }
-
