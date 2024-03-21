@@ -7,7 +7,7 @@ export const useTheme = () => {
 }
 
 export const ThemeContextProvider = ({children}) => {
-    const [themeMode, setThemeMode] = useState("light");
+    let [themeMode, setThemeMode] = useState("light");
     let lightTheme = () => {
 
     };
